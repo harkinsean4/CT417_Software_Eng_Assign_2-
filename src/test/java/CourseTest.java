@@ -3,12 +3,16 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
-public class CourseTest {
+public class CourseTest 
+{
+	private String testCourseName;
 
 	@Before
 	public void setUp() throws Exception 
 	{
-		Course course = new Course();
+		testCourseName = "CT417";
+		
+		Course course = new Course(testCourseName);
 	}
 
 	@Test
