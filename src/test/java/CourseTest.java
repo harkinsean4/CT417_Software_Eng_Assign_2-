@@ -5,6 +5,7 @@ import org.junit.Test;
 
 public class CourseTest 
 {
+	private Course course;
 	private String testCourseName;
 
 	@Before
@@ -12,17 +13,25 @@ public class CourseTest
 	{
 		testCourseName = "CT417";
 		
-		Course course = new Course(testCourseName);
+		course = new Course(testCourseName);
 	}
 
 	@Test
 	public void testGetCourseName() {
-		fail("Not yet implemented");
+		assertEquals(testCourseName, course.getCourseName());
 	}
 
 	@Test
-	public void testGetStudent() {
-		fail("Not yet implemented");
+	public void testGetStudent() 
+	{
+		String studentName = "Sean Harkin";
+		String studentUsername = "s.harkin5";
+		
+		Student student = new Student(studentName, studentUsername);
+		
+		course.addStudent(student);
+		
+		assertEquals(student, course.getStudent(studentName));
 	}
-
+	
 }
