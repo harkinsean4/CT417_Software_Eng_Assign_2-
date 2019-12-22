@@ -15,16 +15,14 @@ env:
 
 build:
   ci:
-    before_install:
-       - mvn clean install  
-       # Create folders for test and code coverage
-    
-    after_success:
-       - mvn test
-       - mkdir -p shippable/testresults
+     - mvn clean install  
+     # Create folders for test and code coverage
 
-       #Run test and code coverage and output results to the right folder
-       # - mvn clean cobertura:cobertura
+     - mvn test
+     - mkdir -p shippable/testresults
+
+     #Run test and code coverage and output results to the right folder
+     # - mvn clean cobertura:cobertura
     
 notifications:
   email:
