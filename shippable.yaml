@@ -27,4 +27,4 @@ build:
 notifications:
   email:
       recipients:
-         harkinsean4@gmail.com
+         - harkinsean4@gmail.com
