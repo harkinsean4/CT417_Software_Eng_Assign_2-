@@ -74,7 +74,7 @@ public class CourseModule
 		if (courseList!= null)
 		{
 			for(int i = 0; i < courseList.size(); i++ )
-			{
+			{	
 				Course course = courseList.get(i);
 				if (course.getCourseName().equals(name)){
 					courseFound = course;

@@ -29,22 +29,18 @@ public class Course
 		this.courseName = courseName;
 	}
 	
-	public void setAcademicStartDate(String startDate)
-	{
-		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("d-MMM-yyyy");
-		
-		academicStartDate = new DateTime(LocalDate.parse(startDate, formatter));
+	public void setAcademicStartDate(int year, int month, int date)
+	{		
+		academicStartDate = new DateTime(year, month, date, 0, 0);
 	}
 	
 	public DateTime getAcademicStartDate() {
 		return academicStartDate;
 	}
 	
-	public void setAcademicEndDate(String endDate)
+	public void setAcademicEndDate(int year, int month, int date)
 	{
-		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("d-MMM-yyyy");
-		
-		academicEndDate = new DateTime(LocalDate.parse(endDate, formatter));
+		academicEndDate = new DateTime(year, month, date, 0, 0);
 	}
 	
 	public DateTime getAcademicEndDate() {
